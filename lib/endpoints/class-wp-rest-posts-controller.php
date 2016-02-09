@@ -101,6 +101,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 		$args['post_parent__not_in']  = $request['parent_exclude'];
 		$args['post_status']          = $request['status'];
 		$args['s']                    = $request['search'];
+		$args['tax_query']            = $request['tax_query'];
 
 		if ( is_array( $request['filter'] ) ) {
 			$args = array_merge( $args, $request['filter'] );
@@ -599,6 +600,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 			'post_parent__in',
 			'post_parent__not_in',
 			'posts_per_page',
+			'tax_query',
 		);
 		$valid_vars = array_merge( $valid_vars, $rest_valid );
 
