@@ -565,7 +565,7 @@ class WP_REST_Posts_Controller extends WP_REST_Controller {
 		 *
 		 * Allows adjusting of the default query vars that are made public.
 		 *
-		 * @param array  Array of allowed WP_Query query vars.
+		 * @param array $query_vars Array of allowed WP_Query query vars.
 		 */
 		$valid_vars = apply_filters( 'query_vars', $wp->public_query_vars );
 
